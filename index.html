@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact & Tasks</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav__brand">Simple web page</div>
+    <ul class="nav__links">
+      <li><a href="#contact-section">Contact</a></li>
+      <li><a href="#info-section">Info</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section class="card" id="contact-section">
+      <h2>Contact Us</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error" />
+          <small id="name-error" class="error-message" aria-live="polite"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error" />
+          <small id="email-error" class="error-message" aria-live="polite"></small>
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="card" id="info-section">
+      <h2>About this page</h2>
+      <p>This page demonstrates a clean contact form with validation, a responsive layout using Flexbox, Grid, and media queries, plus a small interactive to-do list.</p>
+
+      <div class="todo">
+        <h3>To-Do List</h3>
+        <div class="todo__controls">
+          <input id="todo-input" type="text" placeholder="Add a new task..." aria-label="New task" />
+          <button id="todo-add" class="btn btn--secondary" type="button">Add</button>
+        </div>
+        <ul id="todo-list" class="todo__list" aria-live="polite"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
+
+
